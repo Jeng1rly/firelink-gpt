@@ -32,7 +32,9 @@ paths:
             application/json:
               schema:
                 type: object
-                additionalProperties: true
-
-
-    
+                properties:
+                  status:
+                    type: string
+                    description: Status message returned by Zapier
+                required:
+                  - status
