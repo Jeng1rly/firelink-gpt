@@ -4,7 +4,7 @@ info:
   description: Sends arbitrary JSON data to your Zapier Catch Hook URL.
   version: 1.0.0
 servers:
-  - url: https://hooks.zapier.com
+  - url: https://hooks.zapier.com/
     description: Zapier Webhooks base URL
 paths:
   /hooks/catch/20905516/ub2oq7t/:
@@ -27,4 +27,6 @@ paths:
             application/json:
               schema:
                 type: object
-                additional
+                additionalProperties: true
+
+    
