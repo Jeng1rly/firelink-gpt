@@ -4,7 +4,8 @@ title: Zapier Webhook Action
 version: "1.0.0"
 description: Send task data from GPT to Zapier via webhook
 servers:
-- url: https://hooks.zapier.com/hooks/catch/20905516/ub2oq7t/
+- url: https://hooks.zapier.com/hooks/catch/20905516/ub2oq7t
+
 paths:
 /:
 post:
