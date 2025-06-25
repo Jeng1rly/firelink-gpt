@@ -1,5 +1,5 @@
 # firelink-gpt
-openAPI  GPT powering ⇄ Zapier ⇄ Notionintegration.
+openAPI  GPT powering ⇄ Zapier ⇄ Notion integration.
 # Zapier Webhook Schema for GPT Actions
 
 This OpenAPI YAML file enables a ChatGPT-powered GPT to send task data to a Zapier webhook.
