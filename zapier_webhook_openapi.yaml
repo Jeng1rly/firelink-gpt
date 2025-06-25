@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: Zapier Webhook Proxy
-  description: Sends arbitrary JSON data to your Zapier Catch Hook URL.
+  description: Sends generic JSON data to Zapier for Notion tasks or other use cases.
   version: 1.0.0
 servers:
   - url: https://hooks.zapier.com/
@@ -9,17 +9,22 @@ servers:
 paths:
   /hooks/catch/20905516/ub2oq7t/:
     post:
-      operationId: sendToZapier
-      summary: Send data to Zapier Webhook
-      description: Posts a JSON payload to your Zapier webhook to trigger automations.
+      operationId: sendDataToZapier
+      summary: Send generic data to Zapier Webhook
+      description: Sends arbitrary JSON inside a `data` field to Zapier for flexible workflows (e.g., Notion task creation).
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              description: Any custom data to send to Zapier
-              additionalProperties: true
+              properties:
+                data:
+                  type: object
+                  description: Arbitrary JSON data to pass to Zapier
+                  additionalProperties: true
+              required:
+                - data
       responses:
         '200':
           description: Successfully sent to Zapier
@@ -28,5 +33,6 @@ paths:
               schema:
                 type: object
                 additionalProperties: true
+
 
     
